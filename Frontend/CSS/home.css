@@ -73,50 +73,37 @@ a:hover {
 
 /* Main body */
 h1 {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
+    margin-top: 10%; /* Adjusted to create space between the heading and the top */
     text-align: center;
-    color:whitesmoke;
+    color: whitesmoke;
     font-size: 70px;
-    font-family:fantasy;
+    font-family: fantasy;
     font-weight: lighter;
-  }
-  
-h2{
-    position: absolute;
-    top: 28%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
+}
+
+h2 {
+    margin-top: 5px; /* Adjusted to create space between the headings */
     text-align: center;
-    color:whitesmoke;
+    color: whitesmoke;
     font-size: 20px;
-    font-weight:lighter;
+    font-weight: lighter;
 }
 
 .button-container {
-    position: absolute;
-    top: 37%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
+    margin-top: 20px; /* Adjusted to create space between the buttons and the heading */
     text-align: center;
 }
 
-.homebuttons{
-    color:whitesmoke;
+.homebuttons {
+    color: whitesmoke;
     font-size: 20px;
     font-weight: lighter;
-    margin: 0 30px; 
-    text-decoration: none; 
-    display: flex;
+    margin: 0 10px; /* Adjusted to provide spacing between buttons */
+    text-decoration: none;
     border: 1px solid whitesmoke;
     padding: 10px 20px;
-    display: inline-block;
 }
+
 
 footer {
     position: fixed; /* Makes the footer stick to the bottom of the screen */
