@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="../CSS/order.css" />
+</head>
+
+
+<body>
+    <header>
+        <img src="../Images/logo.png" class="logo">
+        <nav>
+            <ul class="icon_list">
+                <li><a href='home.html'>Home</a></li> 
+                <li><a href='menu.html'>Menu</a></li>
+                <li><a href='about.html'>About</a></li>
+                <li><a href='order.html' class="active">Order</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="main">
+        <div class="section-title">
+            <h1>Your Order</h1>
+        </div>
+    </div>
+    
+    <div class="order-container">
+        <div class="order-details">
+            <!-- Order details will be dynamically generated here -->
+        </div>
+
+        <hr>
+
+        <button id="place-order-btn">Place Order</button>
+    </div>
+
+    <script src="../JavaScript/script.js"></script>
+    <script>
+        // Function to validate the quantity input
+        function validateQuantity(quantityInput) {
+            var quantity = parseInt(quantityInput.value);
+            if (isNaN(quantity) || quantity < 1 || quantity > 10) {
+                // Display error message
+                alert("Please enter a valid quantity between 1 and 10.");
+                // Reset quantity input to 1
+                quantityInput.value = 1;
+                return false;
+            }
+            return true;
+        }
+
+        // Function to display order details
+        function displayOrder() {
+            var cart = JSON.parse(localStorage.getItem('cart')) || [];
+            var orderDetails = document.querySelector('.order-details');
+            orderDetails.innerHTML = ''; // Clear existing content
+            
+            // Iterate through each item in the cart
+            cart.forEach(function(item) {
+                var itemDiv = document.createElement('div');
+                itemDiv.classList.add('item');
+
+                var itemName = document.createElement('p');
+                itemName.textContent = item.quantity + ' x ' + item.itemName;
+                
+                // Create a container div for the quantity input and remove button
+                var controlsDiv = document.createElement('div');
+                controlsDiv.classList.add('controls');
+
+                // Create the quantity input element
+                var quantityInput = document.createElement('input');
+                quantityInput.type = 'number';
+                quantityInput.value = item.quantity;
+                quantityInput.min = 1; // Set minimum quantity
+                quantityInput.max = 10; // Set maximum quantity
+
+                // Option to remove an item from the cart
+                var removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove';
+                removeButton.onclick = function() {
+                    // Remove the item from the cart
+                    cart = cart.filter(function(cartItem) {
+                        return cartItem.itemName !== item.itemName;
+                    });
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    // Update the display
+                    displayOrder();
+                };
+                
+                // Append event listener to quantity input for validation
+                quantityInput.addEventListener('change', function() {
+                    if (!validateQuantity(this)) {
+                        // Display feedback indicating which item needs correction
+                        alert("Please correct the quantity for: " + item.itemName);
+                    } else {
+                        // Update the quantity in the cart
+                        item.quantity = parseInt(this.value);
+                        localStorage.setItem('cart', JSON.stringify(cart));
+                        // Recalculate and update the total price
+                        displayOrder();
+                    }
+                });
+
+                // Append the quantity input and remove button to the controls container
+                controlsDiv.appendChild(quantityInput);
+                controlsDiv.appendChild(removeButton);
+                
+                // Append the item name and controls container to the item div
+                itemDiv.appendChild(itemName);
+                itemDiv.appendChild(controlsDiv);
+
+                // Append the item div to the order details
+                orderDetails.appendChild(itemDiv);
+            });
+
+            // Calculate and display total price
+            var totalPrice = cart.reduce(function(total, item) {
+                return total + (parseFloat(item.itemPrice) * parseInt(item.quantity));
+            }, 0);
+
+            var totalPriceDiv = document.createElement('div');
+            totalPriceDiv.classList.add('total-price');
+            totalPriceDiv.textContent = 'Total Price: $' + totalPrice.toFixed(2);
+            orderDetails.appendChild(totalPriceDiv);
+        }
+
+        // Call the displayOrder function when the page loads
+        window.onload = displayOrder;
+
+        document.getElementById('place-order-btn').addEventListener('click', function() {
+            alert('Order has been placed.');
+        });
+    </script>
+</body>
+</html>

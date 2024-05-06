@@ -1,0 +1,152 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: fantasy;
+}
+
+
+.logo{
+    display: block;
+    width: 100px;
+}
+
+header{
+    background-color: rgb(128, 24, 24);
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-family:fantasy;
+}
+
+a:hover {
+    color: #333;
+}
+
+.icon_list{
+    overflow: hidden;
+}
+
+.icon_list a{
+    float:left;
+    color: white;
+    text-align:center;
+    padding: 18px 15px;
+    font-size:16px;
+    text-decoration: none;
+}
+.icon_list a:hover{
+    color:black;
+}
+.icon_list a.active{
+    color:#333;
+}
+
+.icon_list{
+    list-style-type: none; /
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex; 
+    justify-content: space-around; 
+}
+
+.main{
+    width: 1170px;
+    margin: 100px auto;
+}
+
+.section-title{
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.order-container {
+    width: 50%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.order-details {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.order-details h1 {
+    text-align: center;
+}
+.item {
+    margin-bottom: 10px;
+}
+.item p {
+    margin: 0;
+}
+.total-price {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 20px;
+}
+
+.item input[type="number"] {
+    width: 50px; 
+}
+
+
+.item button {
+    margin-left: 10px; 
+}
+
+hr {
+    border: 1px solid #ccc;
+}
+
+/* Style for the button */
+#place-order-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: rgb(128, 24, 24);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#place-order-btn:hover {
+    background-color: #7c1515;
+}
+
+@media screen and (max-width:1300px) {
+    footer{
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .logo {
+        position: absolute;
+        height: auto;
+        left: -5px;
+        width: 100px;
+        top: 15px;
+    }
+    header {
+        font-size: 12px;
+        text-align: center;
+    }  
+}

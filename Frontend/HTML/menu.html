@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="../CSS/menu.css" />
+    <style>
+        header{
+            background-color: rgb(128, 24, 24);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src = '../Images/logo.png' class="logo">
+        <nav>
+            <ul class="icon_list">
+                <li><a href = 'home.html'>Home</a></li> 
+                <li><a href = 'menu.html' class="active">Menu</a></li>
+                <li><a href = 'about.html'>About</a></li>
+                <li><a href = 'order.html'></order>Order</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main">
+        <div class="section-title">
+            <h2>Our Menu</h2>
+            <p>Fresh • Healthy • Locally Sourced</p>
+        </div>
+        <div class="menus">
+            <div class="menu-column">
+                <h4>Breakfast</h4>
+                <div class="single-menu">
+                    <img src="../Images/toast.jpeg" alt="">
+                    <div class="menu-content">
+                        <h5>French Toast <span>$4</span></h5>
+                        <p>Custard-soaked, Berries</p>
+                        <select class="quantitySelect">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <button onclick="addToOrder(this)">Add to Order</button>
+                    </div>
+                </div>
+                <div class="single-menu">
+                    <img src="../Images/break-burrito.jpeg" alt="">
+                    <div class="menu-content">
+                        <h5>Breakfast Burrito <span>$3</span></h5>
+                        <p>Bacon, Egg, and Cheese</p>
+                        <select class="quantitySelect">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <button onclick="addToOrder(this)">Add to Order</button>
+                    </div>
+                </div>
+                <div class="single-menu">
+                    <img src="../Images/biscuit.jpeg" alt="">
+                    <div class="menu-content">
+                        <h5>Biscuit Sandwich <span>$3</span></h5>
+                        <p>Buttery Biscuit with Sausage, Egg, and Cheese</p>
+                        <select class="quantitySelect">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <button onclick="addToOrder(this)">Add to Order</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="menu-column">
+                <h4>Lunch</h4>
+                <div class="single-menu">
+                    <img src="../Images/alfredo.jpeg" alt="">
+                    <div class="menu-content">
+                        <h5>Chicken Alfredo Pasta <span>$6</span></h5>
+                        <p>Parmasean Marinated, Chicken</p>
+                        <select class="quantitySelect">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <button onclick="addToOrder(this)">Add to Order</button>
+                    </div>
+                </div>
+                <div class="single-menu">
+                    <img src="../Images/pizza.jpeg" alt="">
+                    <div class="menu-content">
+                        <h5>Pepperoni Pizza <span>$5</span></h5>
+                        <p>Herb Crusted Pepperoni Pizza</p>
+                        <select class="quantitySelect">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <button onclick="addToOrder(this)">Add to Order</button>
+                    </div>
+                </div>
+                <div class="single-menu">
+                    <img src="../Images/salad.jpeg" alt="">
+                    <div class="menu-content">
+                        <h5>Caesar Salad <span>$5</span></h5>
+                        <p>Classic Romaine Crunch</p>
+                        <select class="quantitySelect">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <button onclick="addToOrder(this)">Add to Order</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-column">
+                <h4>Dinner</h4>
+                <div class="single-menu">
+                    <img src="../Images/steak.jpg" alt="">
+                    <div class="menu-content">
+                        <h5>Steak Bowl <span>$9</span></h5>
+                        <p>Thyme Marinated Steak Over Rice</p>
+                        <select class="quantitySelect">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <button onclick="addToOrder(this)">Add to Order</button>
+                    </div>
+                </div>
+                <div class="single-menu">
+                    <img src="../Images/chicken.jpeg" alt="">
+                    <div class="menu-content">
+                        <h5>Orange Chicken <span>$6</span></h5>
+                        <p>Citrus Style Chicken Over Rice</p>
+                        <select class="quantitySelect">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <button onclick="addToOrder(this)">Add to Order</button>
+                    </div>
+                </div>
+                <div class="single-menu">
+                    <img src="../Images/salmon.jpeg" alt="">
+                    <div class="menu-content">
+                        <h5>Salmon Risotto <span>$8</span></h5>
+                        <p>Grilled Salmon, Creamy Arborio, Fresh Herbs</p>
+                        <select class="quantitySelect">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <button onclick="addToOrder(this)">Add to Order</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>14000 University Blvd, Sugar Land, TX 77479</p>
+        <p>(832) 842-2900</p>
+        <a href="https://www.uh.edu/">www.uh.edu</a>
+    </footer>
+    <script src="../JavaScript/script.js"></script>
+</body>
+</html>

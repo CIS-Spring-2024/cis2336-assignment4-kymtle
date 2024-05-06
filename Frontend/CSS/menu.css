@@ -1,0 +1,187 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: fantasy;
+    box-sizing: border-box;
+}
+
+
+.logo{
+    display: block;
+    width: 100px;
+}
+
+header{
+    background-color: rgb(128, 24, 24);
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-family:fantasy;
+}
+
+a:hover {
+    color: #333;
+}
+
+.icon_list{
+    overflow: hidden;
+}
+
+.icon_list a{
+    float:left;
+    color: white;
+    text-align:center;
+    padding: 18px 15px;
+    font-size:16px;
+    text-decoration: none;
+}
+.icon_list a:hover{
+    color:black;
+}
+.icon_list a.active{
+    color:#333;
+}
+
+.icon_list{
+    list-style-type: none; 
+    padding: 0;
+    overflow: hidden;
+    display: flex; 
+    justify-content: space-around; 
+}
+
+.single-menu img{
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    object-fit: cover;
+    border-radius: 50%;
+    max-width: 110px;
+    border: 1px solid #333;
+    padding: 3px;
+    margin-right: 15px;
+    transition: .3s;
+}
+
+.single-menu:hover img{
+    transform: rotate(180deg);
+}
+
+.main{
+    width: 1170px;
+    margin: 100px auto;
+}
+
+.section-title{
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.section-title h2{
+    text-transform:capitalize;
+    font-size: 35px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1px;
+    margin-bottom: 0px;
+}
+
+.section-title h2:before{
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color:red;
+    bottom: 0;
+    left: 50px;
+    transform: translateX(-50%);
+}
+
+.menus{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menu-column h4{
+    text-transform: capitalize;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;;
+}
+
+.menu-column h4:before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: red;
+    bottom: 0;
+}
+
+.menu-column{
+    width: 31%;   
+}
+
+.single-menu{
+    display: flex;
+    align-items: center;  
+    margin-top: 20px;
+}
+
+.single-menu .menu-content h5{
+    text-transform:capitalize;
+    font-size: 22px;
+    font-weight: 500;
+    border-bottom: 1px dashed #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.single-menu .menu-content h5 span{
+    color: red;
+    float: right;
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+footer {
+    position: flex; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    margin-top: 50px;
+    text-align: left;
+    padding: 8px 0;
+    background: #333;
+    color: #fff;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: red;
+}
+
+footer p, a {
+    margin-left: 20px;
+}
+
